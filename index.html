@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Real Fake Services!</title>
     <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
 </head>
 <body>
     <div class="banner">
@@ -13,7 +14,7 @@
             <img src="odin-lined.png" alt="Line art of the Odin Project logo">
             <p>ODIN</p>
         </div>
-        <p class="attribution">Photo by <a href="">Halie West</a>  on <a href="">Unsplash</a> </p>
+        <p class="attribution">Photo by <a href="https://unsplash.com/@haliewestphoto">Halie West</a>  on <a href="https://unsplash.com/photos/25xggax4bSA">Unsplash</a> </p>
     </div>
     <div class="signup">
         <p class="pitch">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.
@@ -22,34 +23,43 @@
         You <em>know</em> you want to.
         </p>
     <div class="formRibbon">
-        <form action="">
+        <p><strong>Let's do this!</strong></p>
+        <br>
+        <form action="#">
             <div>
             <label for="fName">FIRST NAME</label>
-            <input type="text" name="fname" id="fname">
+            <input type="text" name="fname" id="fname" required placeholder="Thor">
+            <p class="help">*Please enter your first name</p>
             </div>
             <div>
-            <label for="lName">LAST NAME</label>
-            <input type="text" name="lname" id="lname">
-            </div>
+                <label for="lName">LAST NAME</label>
+                <input type="text" name="lname" id="lname" required placeholder="Odinson">
+                <p class="help">*Please enter your last name</p>
+                </div>
             <div>
             <label for="email">EMAIL</label>
-            <input type="email" name="email" id="email">
+            <input type="email" name="email" id="email" required placeholder="example@fakewebsite.com" minlength="5">
+            <p class="help">*Please enter a valid email address</p>
             </div>
             <div>
-            <label for="phone">PHONE NUMBER</label>
-            <input type="tel" name="phone" id="phone">
-            </div>
+                <label for="phone">PHONE NUMBER</label>
+                <input type="tel" name="phone" id="phone" placeholder="555-555-5555" minlength="10" maxlength="12">
+                <p class="help">*Please enter a valid phone number</p>
+                </div>
             <div>
-            <label for="password">PASSWORD</label>
-            <input type="password" name="password" id="password">
-            </div>
+                <label for="password">PASSWORD</label>
+                <input type="password" name="password" id="password" required placeholder="**********" novalidate>
+                <p class="match">*Passwords do not match</p>
+                <p class="help">*Please fill both password fields</p>
+                </div>
             <div>
             <label for="confirm">CONFIRM PASSWORD</label>
-            <input type="password" name="confirm" id="confirm">
+            <input type="password" name="confirm" id="confirm" required placeholder="**********">
             </div>
+            <button class="button" type="submit" novalidate>Create Account</button>
         </form>
     </div>
-        <button>Create Account</button>
+
         <p>Already have an account? <a href="">Log in</a></p>
     </div>
     
